@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 if os.path.isfile("env.py"):
     import env
@@ -129,6 +130,9 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://pjcuqjka:977TPF5W7OM7i9AZ65VVYd-h1yg9O9IF@trumpet.db.elephantsql.com/pjcuqjka')
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
