@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['ci-pp5-boutique-ado-6393678e3bac.herokuapp.com', 'localhost']
@@ -189,7 +189,6 @@ if 'USE_AWS' in os.environ:
         'CacheControl': 'max-age=94608000',
     }
 
-
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'ci-pp5-boutique-ado'
     AWS_S3_REGION_NAME = 'eu-west-1'
@@ -217,7 +216,7 @@ STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+    DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
