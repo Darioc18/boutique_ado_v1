@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['ci-pp5-boutique-ado-6393678e3bac.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['ci-pp5-boutique-ado-6393678e3bac.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
